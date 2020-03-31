@@ -9,5 +9,7 @@
 </ul>
 <br /><br />
 <%= link_to "List of tags", tags_path %>
-<br />
-<%= link_to "Create a New Article", new_article_path, calss: "new_article" %>
+<% if logged_in? %>
+   <br />
+   <%= link_to "Create a New Article", new_article_path, calss: "new_article" %>
+<% end %>
